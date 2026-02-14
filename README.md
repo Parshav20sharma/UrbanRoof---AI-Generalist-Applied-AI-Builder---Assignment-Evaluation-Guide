@@ -1,415 +1,287 @@
-<<<<<<< HEAD
+# UrbanRoof – Option B - AI Lead Response Assistant
 
-# UrbanRoof Lead Response Assistant
+AI Generalist | Applied AI Builder – Assignment Submission
 
-AI-powered chatbot that reads customer enquiries and generates professional, safe, and helpful responses.
-
-Built using:
-
-• Streamlit
-• Ollama
-• LLaMA 3.2
-• Python
+Submitted By:
+PARSHAV SHARMA
+Email: [20sharmaparshav@gmail.com](mailto:20sharmaparshav@gmail.com)
 
 ---
 
-# Features
+## Project Overview
 
-• Understands customer intent
-• Generates professional responses
-• Provides safety precautions
-• Asks relevant follow-up questions
-• Suggests inspection appointment
-• Works fully offline
-• Real-time chatbot interface
+This project is an AI-powered Lead Response Assistant built as part of the AI Generalist | Applied AI Builder Assignment (Option B – Lead Response Assistant).
 
----
+The system reads customer enquiries and generates professional, safe, and helpful responses in a chatbot format.
 
-# Project Structure
-=======
-Project Name: UrbanRoof Lead Response Assistant
-Type: AI Chatbot using Streamlit + Ollama (Local LLM)
-Purpose: Automatically read customer enquiries and generate professional, safe, and helpful responses.
+The assistant is designed to:
 
----
+* Understand customer intent
+* Acknowledge the issue professionally
+* Ask relevant follow-up questions
+* Provide safe precautions
+* Avoid hallucinated or false claims
+* Recommend scheduling an inspection when appropriate
+* Work as a real-time chatbot
 
-# System Requirements
-
-Minimum Requirements
-
-• OS: Windows 10/11, macOS, or Linux
-• RAM: 8 GB minimum (16 GB recommended)
-• Storage: 10 GB free space
-• Python: 3.10 or higher
-• Internet: Required for initial setup
-
-Required Software
-
-• Python
-• Ollama
-• Streamlit
-• Git (optional)
+This project uses a local LLM via Ollama (llama3.2:3b) and Streamlit for the user interface.
 
 ---
 
-# Step 1 — Install Python
+## Features
 
-1. Go to:
-   [https://www.python.org/downloads/](https://www.python.org/downloads/)
-
-2. Download Python 3.11
-
-3. During installation, CHECK:
-
-✔ Add Python to PATH
-
-4. Verify installation:
-
-Open PowerShell / Terminal and run:
-
-```bash
-python --version
-```
-
-Expected output:
-
-```bash
-Python 3.11.x
-```
+* Real-time chatbot interface
+* Professional and structured responses
+* Intent detection (problem, service inquiry, general inquiry)
+* Safe and reliable output
+* Runs completely locally (no paid API required)
+* Privacy-friendly (no external data sharing)
 
 ---
 
-# Step 2 — Install Ollama
+## Technology Stack
 
-Ollama is used to run the AI model locally.
-
-1. Go to:
-   [https://ollama.com/download](https://ollama.com/download)
-
-2. Download and install Ollama
-
-3. Verify installation:
-
-```bash
-ollama --version
-```
-
-Expected output:
-
-```bash
-ollama version x.x.x
-```
+* Python 3.10+
+* Streamlit (UI)
+* Ollama (Local LLM runtime)
+* Llama 3.2 (3B model)
+* Prompt engineering
+* Modular architecture
 
 ---
 
-# Step 3 — Download the AI Model
-
-Run:
-
-```bash
-ollama pull llama3.2:3b
-```
-
-This downloads the AI model.
-
-This step is required only once.
-
----
-
-# Step 4 — Download or Copy Project Folder
-
-Project structure should be:
->>>>>>> e389e8a76c966b0b194f8e162eeb4f9f3b32f6c1
+## Project Structure
 
 ```
 lead-response-assistant/
 │
 ├── app/
+│   ├── __init__.py
 │   ├── ai_engine.py
 │   ├── prompt.py
-│   ├── validator.py
-<<<<<<< HEAD
-=======
-│   └── __init__.py
->>>>>>> e389e8a76c966b0b194f8e162eeb4f9f3b32f6c1
+│   └── validator.py
 │
 ├── streamlit_app.py
 ├── requirements.txt
-└── README.md
+├── README.md
 ```
 
 ---
 
-<<<<<<< HEAD
-# Installation
+## System Requirements
 
-Step 1:
+Before running this project, install:
 
-Install Python
+* Python 3.10 or higher
+* Ollama
 
-Step 2:
+Download Ollama from:
+https://ollama.com/download
 
-Install Ollama
+Install and verify:
 
-Step 3:
-
-Download model
-
-```bash
-ollama pull llama3.2:3b
+```
+ollama --version
 ```
 
-Step 4:
+---
 
-Create virtual environment
+## Step-by-Step Installation Guide
 
-```bash
-python -m venv venv
-venv\Scripts\activate
+Follow these steps carefully.
+
+---
+
+### Step 1: Clone the Repository
+
+```
+git clone https://github.com/Parshav20sharma/UrbanRoof---AI-Generalist-Applied-AI-Builder---Assignment-Evaluation-Guide.git
+
+cd UrbanRoof---AI-Generalist-Applied-AI-Builder---Assignment-Evaluation-Guide/lead-response-assistant
 ```
 
-Step 5:
+---
 
-Install dependencies
-=======
-# Step 5 — Create Virtual Environment
-
-Navigate to project folder:
-
-```bash
-cd lead-response-assistant
-```
-
-Create environment:
-
-```bash
-python -m venv venv
-```
-
-Activate environment:
+### Step 2: Create Virtual Environment
 
 Windows:
 
-```bash
+```
+python -m venv venv
 venv\Scripts\activate
 ```
 
 Mac/Linux:
 
-```bash
+```
+python3 -m venv venv
 source venv/bin/activate
 ```
 
 ---
 
-# Step 6 — Install Dependencies
+### Step 3: Install Dependencies
 
-Run:
->>>>>>> e389e8a76c966b0b194f8e162eeb4f9f3b32f6c1
-
-```bash
-pip install -r requirements.txt
 ```
-
-<<<<<<< HEAD
-Step 6:
-
-Run application
-=======
-OR manually:
-
-```bash
-pip install streamlit ollama python-dotenv
+pip install -r requirements.txt
 ```
 
 ---
 
-# Step 7 — Run Ollama Model
+### Step 4: Install and Pull AI Model
 
-Start Ollama in terminal:
+Run:
 
-```bash
-ollama run llama3.2:3b
+```
+ollama pull llama3.2:3b
+```
+
+Wait until the model downloads completely.
+
+---
+
+### Step 5: Start Ollama Server
+
+Run:
+
+```
+ollama serve
 ```
 
 Keep this terminal open.
 
 ---
 
-# Step 8 — Run the Chatbot Application
+### Step 6: Run the Application
 
-Open new terminal.
+Open a new terminal in the project folder and run:
 
-Navigate to project folder:
-
-```bash
-cd lead-response-assistant
 ```
-
-Activate environment:
-
-```bash
-venv\Scripts\activate
-```
-
-Run Streamlit:
->>>>>>> e389e8a76c966b0b194f8e162eeb4f9f3b32f6c1
-
-```bash
 streamlit run streamlit_app.py
 ```
 
 ---
 
-<<<<<<< HEAD
-# Usage
+### Step 7: Open in Browser
 
-Open browser:
-=======
-# Step 9 — Access Application
+Streamlit will open automatically.
 
-Browser will open automatically.
-
-If not, open:
->>>>>>> e389e8a76c966b0b194f8e162eeb4f9f3b32f6c1
+If not, open manually:
 
 ```
 http://localhost:8501
 ```
 
-<<<<<<< HEAD
-=======
 ---
 
-# Step 10 — Using the Chatbot
+## How to Use the Application
 
->>>>>>> e389e8a76c966b0b194f8e162eeb4f9f3b32f6c1
-Enter:
-
-• Name
-• Location
-<<<<<<< HEAD
-• Query
+1. Enter your Name
+2. Enter your Location
+3. Type your issue or question
 
 Example:
 
-"I have roof leakage after rain"
-
-AI will respond professionally.
-
----
-
-# Example Output
-
-• Acknowledgement
-• Risk explanation
-• Safety precautions
-=======
-• Customer query
-
-Example query:
-
-"I am getting damp patches on my wall after rain."
-
-The chatbot will generate:
-
-• Acknowledgement
-• Risk explanation
-• Safety steps
->>>>>>> e389e8a76c966b0b194f8e162eeb4f9f3b32f6c1
-• Follow-up questions
-• Appointment suggestion
-
----
-
-<<<<<<< HEAD
-# Model Used
-
-LLaMA 3.2 (3B) via Ollama
-
-Runs locally.
-
----
-
-# Future Improvements
-
-• Database integration
-• Appointment booking system
-• Image upload support
-• Multi-language support
-• Cloud deployment
-
----
-
-# Author
-
-Parshav Sharma
-B.Tech Artificial Intelligence and Machine Learning
-=======
-# Step 11 — Stopping the Application
-
-Press:
-
 ```
-CTRL + C
+Hi, I am getting damp patches on my bedroom wall after rain. What should I do?
 ```
 
-in terminal.
+The AI assistant will:
+
+* Acknowledge your issue
+* Explain possible risks
+* Ask relevant questions
+* Suggest safety precautions
+* Recommend scheduling inspection
+
+You can continue chatting in the same conversation.
 
 ---
 
-# Troubleshooting Guide
+## Example Use Cases
 
-Problem: ollama not recognized
-Solution: Restart system after installing Ollama
+Customer Issues:
 
-Problem: streamlit not recognized
-Solution:
+* Damp walls
+* Water leakage
+* Roof cracks
+* Waterproofing problems
 
-```bash
-pip install streamlit
-```
+General Questions:
 
-Problem: model not found
-Solution:
-
-```bash
-ollama pull llama3.2:3b
-```
-
-Problem: chatbot not responding
-Solution: Ensure Ollama is running.
+* Services offered
+* Inspection process
+* Maintenance guidance
 
 ---
 
-# Architecture Overview
+## How the System Works
 
-User → Streamlit UI → AI Engine → Ollama Model → Response → Streamlit UI
+Flow:
 
----
+User Input → Prompt Engineering → Ollama LLM → Response Validation → Professional Output → Chat UI
 
-# Technologies Used
+Modules:
 
-• Python
-• Streamlit
-• Ollama
-• LLaMA 3.2 (3B model)
-• Prompt Engineering
+ai_engine.py
+Handles AI model communication
 
----
+prompt.py
+Controls response format and behavior
 
-# Security Advantage
+validator.py
+Ensures safe and structured responses
 
-• Fully local AI
-• No external API required
-• No data leakage
+streamlit_app.py
+Provides chatbot interface
 
 ---
 
-# Performance
+## Safety and Reliability
 
-Response time: 1–3 seconds
-Accuracy: High
-Reliability: High
+The assistant is designed to:
 
->>>>>>> e389e8a76c966b0b194f8e162eeb4f9f3b32f6c1
+* Avoid false claims
+* Avoid unsafe recommendations
+* Ask clarification questions
+* Provide only general guidance
+* Recommend professional inspection when needed
+
+---
+
+## Limitations
+
+* Uses local model (limited compared to large cloud models)
+* Does not access real inspection data
+* Provides guidance, not final diagnosis
+
+---
+
+## Future Improvements
+
+* Integration with company database
+* Appointment booking system
+* Image upload support
+* Cloud deployment
+* Better intent classification
+
+---
+
+## Assignment Objective – Completed
+
+This project successfully demonstrates:
+
+* AI workflow design
+* Prompt engineering
+* Chatbot implementation
+* Reliable AI response generation
+* Real-world applied AI solution
+
+---
+
+## Contact
+
+PARSHAV SHARMA
+Email: [20sharmaparshav@gmail.com](mailto:20sharmaparshav@gmail.com)
+
+
