@@ -6,8 +6,6 @@ Submitted By:
 PARSHAV SHARMA
 Email: [20sharmaparshav@gmail.com](mailto:20sharmaparshav@gmail.com)
 
-Loom Video : https://www.loom.com/share/0487acd184b74025a4716eede07e09df?t=431
-
 ---
 
 ## Project Overview
